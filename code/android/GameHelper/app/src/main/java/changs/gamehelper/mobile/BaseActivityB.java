@@ -11,12 +11,12 @@ import changs.android.frame.components.FActivity;
 
 public abstract class BaseActivityB<B extends ViewDataBinding> extends FActivity {
 
-    B binding;
+    protected B binding;
 
     @Override
     public void setRootView() {
         final int layoutRes = getLayoutRes();
         if (layoutRes != 0)
-            binding =  DataBindingUtil.setContentView(this, layoutRes);
+            binding = DataBindingUtil.setContentView(this, layoutRes);
     }
 }

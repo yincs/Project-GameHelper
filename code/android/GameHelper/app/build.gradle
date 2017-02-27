@@ -42,6 +42,6 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
 
-    compile 'changs.android:frame:0.0.1'
+    compile 'changs.android:frame:0.0.2'
     compile 'me.shaohui:bottomdialog:1.1.9'
 }

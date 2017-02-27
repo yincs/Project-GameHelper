@@ -6,9 +6,9 @@
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:focusableInTouchMode="true"
-        tools:context="changs.gamehelper.mobile.MainActivity">
+        android:orientation="vertical"
+        tools:context="changs.gamehelper.mobile.contract.view.MainActivity">
 
 
         <EditText
@@ -25,19 +25,49 @@
             android:layout_gravity="center"
             android:text="@string/brush_lollipop" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:text="@string/history" />
-
-        <android.support.v7.widget.RecyclerView
-            android:layout_marginTop="10dp"
-            android:id="@+id/rccView"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/history" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rccView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/history_url" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rccView_url"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
     </LinearLayout>
 
 </layout>

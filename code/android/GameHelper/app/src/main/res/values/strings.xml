@@ -2,5 +2,6 @@
     <string name="app_name">GameHelper</string>
     <string name="brush_lollipop">刷棒棒糖</string>
     <string name="enter_qiuqiu_personal_sharing_links">请输入球球的个人分享链接</string>
-    <string name="history">历史记录：</string>
+    <string name="history">历史记录</string>
+    <string name="history_url">历史链接</string>
 </resources>

@@ -1,8 +1,7 @@
 package changs.gamehelper.mobile.dao;
 
-import java.util.Date;
-
 import io.realm.RealmObject;
+import io.realm.annotations.PrimaryKey;
 
 /**
  * Created by yincs on 2017/2/25.
@@ -10,20 +9,18 @@ import io.realm.RealmObject;
 
 public class QiuQiuUrl extends RealmObject {
 
-    private int id;
-
+    @PrimaryKey
     private String url;
 
-    private Date date;
+    private String account;
 
-    private boolean success;
 
-    public int getId() {
-        return id;
+    public QiuQiuUrl() {
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public QiuQiuUrl(String url, String account) {
+        this.url = url;
+        this.account = account;
     }
 
     public String getUrl() {
@@ -34,19 +31,17 @@ public class QiuQiuUrl extends RealmObject {
         this.url = url;
     }
 
-    public Date getDate() {
-        return date;
+    public String getAccount() {
+        return account;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
-    public boolean isSuccess() {
-        return success;
-    }
 
-    public void setSuccess(boolean success) {
-        this.success = success;
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof QiuQiuUrl && ((QiuQiuUrl) obj).url.equals(url);
     }
 }
